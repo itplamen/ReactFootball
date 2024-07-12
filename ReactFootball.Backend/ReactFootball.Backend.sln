@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactFootball.Services.Mode
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactFootball.Services.Cache", "Services\ReactFootball.Services.Cache\ReactFootball.Services.Cache.csproj", "{35EAE47C-F491-451E-B3FC-0D3C46C76840}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactFootball.Infrastructure.IoCContainer", "Infrastructure\ReactFootball.Infrastructure.IoCContainer\ReactFootball.Infrastructure.IoCContainer.csproj", "{823C87AB-D5FB-453F-8C92-9C1C7B9E8E02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{35EAE47C-F491-451E-B3FC-0D3C46C76840}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35EAE47C-F491-451E-B3FC-0D3C46C76840}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35EAE47C-F491-451E-B3FC-0D3C46C76840}.Release|Any CPU.Build.0 = Release|Any CPU
+		{823C87AB-D5FB-453F-8C92-9C1C7B9E8E02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{823C87AB-D5FB-453F-8C92-9C1C7B9E8E02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{823C87AB-D5FB-453F-8C92-9C1C7B9E8E02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{823C87AB-D5FB-453F-8C92-9C1C7B9E8E02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +47,7 @@ Global
 		{E6F4430A-B759-488B-8883-07EFD79879D7} = {2DED6458-75F0-43CE-8498-25ED6E68F308}
 		{CF390B75-5538-474D-A384-52E7BFFBFF56} = {2DED6458-75F0-43CE-8498-25ED6E68F308}
 		{35EAE47C-F491-451E-B3FC-0D3C46C76840} = {2DED6458-75F0-43CE-8498-25ED6E68F308}
+		{823C87AB-D5FB-453F-8C92-9C1C7B9E8E02} = {E7828BAE-ED44-4A15-A319-E1B03C8BF362}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F293680B-8A5E-494E-9B4B-0D673339C5ED}
