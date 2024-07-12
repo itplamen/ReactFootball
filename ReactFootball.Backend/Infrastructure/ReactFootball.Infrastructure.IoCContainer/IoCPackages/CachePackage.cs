@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-using Microsoft.Extensions.Caching.Memory;
+﻿using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -19,12 +17,12 @@ namespace ReactFootball.Infrastructure.IoCContainer.IoCPackages
         public CachePackage(IConfiguration configuration)
         {
             this.configuration = configuration;
-            absoluteExpiration = int.Parse(configuration["Cache:AbsoluteExpiration"]);
+            absoluteExpiration = 86400; // int.Parse(configuration["Cache:AbsoluteExpiration"]);
         }
 
         public void RegisterServices(IServiceCollection services)
         {
-            RegisterCacheService<IEnumerable<ScoreBatResponseModel>>(services);
+            RegisterCacheService<ScoreBatResponseModel>(services);
         }
 
         private void RegisterCacheService<TValue>(IServiceCollection services)
