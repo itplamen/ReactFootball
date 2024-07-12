@@ -1,5 +1,6 @@
-﻿using Microsoft.Extensions.Caching.Memory;
-using Microsoft.Extensions.Configuration;
+﻿using System;
+
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.DependencyInjection;
 
 using ReactFootball.Infrastructure.IoCContainer.Contracts;
@@ -12,12 +13,10 @@ namespace ReactFootball.Infrastructure.IoCContainer.IoCPackages
     public sealed class CachePackage : IPackage
     {
         private int absoluteExpiration;
-        private readonly IConfiguration configuration;
 
-        public CachePackage(IConfiguration configuration)
+        public CachePackage()
         {
-            this.configuration = configuration;
-            absoluteExpiration = 86400; // int.Parse(configuration["Cache:AbsoluteExpiration"]);
+            absoluteExpiration = int.Parse(Environment.GetEnvironmentVariable("AbsoluteExpiration", EnvironmentVariableTarget.Process));
         }
 
         public void RegisterServices(IServiceCollection services)
