@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <Nullable>disabled</Nullable>
+    <Nullable>disable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ReactFootball.Services.Cache\ReactFootball.Services.Cache.csproj" />
     <ProjectReference Include="..\ReactFootball.Services.Models\ReactFootball.Services.Models.csproj" />
   </ItemGroup>
 
