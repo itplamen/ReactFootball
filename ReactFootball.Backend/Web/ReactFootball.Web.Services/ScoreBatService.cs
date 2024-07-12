@@ -19,7 +19,11 @@ namespace ReactFootball.Web.Services
         [Function("ScoreBatService")]
         public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "scorebat")] HttpRequest req)
         {
-            var request = new ScoreBatRequestModel();
+            var request = new ScoreBatRequestModel() 
+            {
+                Url = Environment.GetEnvironmentVariable("ScoreBatUrl", EnvironmentVariableTarget.Process),
+                Token = Environment.GetEnvironmentVariable("ScoreBatToken", EnvironmentVariableTarget.Process)
+            };
 
             var response = await dataProvider.GetData(request);
 
