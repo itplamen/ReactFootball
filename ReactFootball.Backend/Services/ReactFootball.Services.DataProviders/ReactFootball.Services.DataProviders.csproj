@@ -5,4 +5,12 @@
     <Nullable>disabled</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ReactFootball.Services.Models\ReactFootball.Services.Models.csproj" />
+  </ItemGroup>
+
 </Project>
